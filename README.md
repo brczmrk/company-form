@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Company form - React App
+
+*Created by Márk Baricz.*
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The form consists of two parts: company data and employee data.
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+- App: 
+This is the main component, which is rendered in the root. It contains one, eventually two components. First one is the **Form**, and in case of valid form submission there is a **Result** component too.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Form:
+This components job is the handling of the whole form. Here are the states and default values defined. First part that appears in the form is the **CompanyData**, here you can give the details of the company. Second part is **Employees** which collects all the **EmployeeData**. At the bottom of the form you can find the submit button, which submits the data, and a reset button, which resets all the fields to their default values.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- CompanyData:
+There are three required fields to fill, the name, email and number of employees. There is a validity checking on the email input (should be a valid email) and on the number of employees (should be a positive number; min. 1 max. 100). The description field is optional.
 
-### `npm test`
+- Employees:
+As mentioned before, here are defined dynamically the **EmployeeData** sections depending on the *number of employees* given in the **CompanyData** part.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- EmployeeData:
+There are four required fields to fill, the name, email, job title and age. There is a validity checking on the email input (should be a valid email), job title (should be selected from the given options) and age (should be a positive number; min. 18). The CV file attachment is optional, but there can be uploaded only *.pdf files.
 
-### `npm run build`
+- Result:
+If every required field is filled correctly, so all of them are valid, and the form is submitted, below the form appears the (lastly) submitted data in JSON format.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The styling is done with vanilla CSS, structured in *.module.css files per component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Missing features
 
-### `npm run eject`
+The file handling from the **EmployeeData** is missing, so the upload of a file is not even required.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+There is no connection to a backend. The submitted data is transformed to JSON, but is not sent to an endpoint.
