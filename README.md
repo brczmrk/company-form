@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The form consists of two parts: company data and employee data.
 
+The App is deployed to http://brczmrk.github.io/company-form.
+
 ## Components
 
 - App: 
