@@ -1,0 +1,94 @@
+.employeedata {
+  display: inline-block;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px -20px rgba(0, 0, 0, 0.75);
+  padding: 10px 70px;
+  margin: 20px;
+  max-width: 60%;
+}
+
+.employeedata h3 {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.formcontrol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.formcontrol input,
+.formcontrol select,
+.formcontrol label {
+  display: block;
+}
+
+.formcontrol label {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.required label::after {
+  content: " *";
+  color: red;
+}
+
+.formcontrol input,
+.formcontrol select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  width: 15rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.formcontrol input[type="number"] {
+  width: 5rem;
+}
+
+.formcontrol input[type="file"] {
+  border: none;
+  display: inline-block;
+  margin: auto;
+
+  border-radius: 0;
+  text-align: center;
+}
+
+.formcontrol input:focus,
+.formcontrol select:focus {
+  outline: none;
+  border-color: rgb(3, 177, 255);
+}
+
+.formcontrol p {
+  color: red;
+}
+
+.error input,
+.error select {
+  border: 1px solid red;
+  background: rgb(255, 197, 190);
+}
+
+::-webkit-file-upload-button {
+  color: white;
+  font-weight: 400;
+  background: rgb(3, 177, 255);
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
+}
+
+::-webkit-file-upload-button:hover {
+  background: rgb(84, 201, 255);
+  box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.75);
+}

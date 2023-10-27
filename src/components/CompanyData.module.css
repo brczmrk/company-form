@@ -1,0 +1,70 @@
+.companydata {
+  background: #fff;
+}
+
+.companydata h2 {
+  display: inline-block;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+}
+
+.formcontrol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formcontrol input,
+.formcontrol textarea .formcontrol label {
+  display: block;
+}
+
+.formcontrol label {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.required label::after {
+  content: " *";
+  color: red;
+}
+
+.formcontrol input,
+.formcontrol textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.formcontrol input[type="number"] {
+  width: 5rem;
+}
+
+.formcontrol textarea {
+  width: 30rem;
+  min-width: min(20rem, 100%);
+  max-width: min(30rem, 100%);
+  text-align: left;
+}
+
+.formcontrol input:focus,
+.formcontrol textarea:focus {
+  outline: none;
+  border-color: rgb(3, 177, 255);
+}
+
+.formcontrol p {
+  color: red;
+}
+
+.error input {
+  border: 1px solid red;
+  background: rgb(255, 197, 190);
+}

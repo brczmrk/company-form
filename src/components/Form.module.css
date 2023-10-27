@@ -1,0 +1,35 @@
+.form {
+  display: block;
+  margin: 60px auto;
+  background: #fff;
+  text-align: center;
+  width: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px -15px rgba(0, 0, 0, 0.75);
+}
+
+.form button {
+  background: rgb(3, 177, 255);
+  border: 2px solid transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
+  margin: 20px;
+}
+
+.form button:hover {
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.75);
+  background: rgb(83, 200, 255);
+}
+
+.form button:active {
+  color: rgb(3, 177, 255);
+  background: white;
+  border: 2px solid rgb(3, 177, 255);
+  transition: 0s;
+}
