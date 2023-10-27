@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/company-form/static/css/main.527fa59b.css",
+    "main.js": "/company-form/static/js/main.01ed7228.js",
+    "index.html": "/company-form/index.html",
+    "main.527fa59b.css.map": "/company-form/static/css/main.527fa59b.css.map",
+    "main.01ed7228.js.map": "/company-form/static/js/main.01ed7228.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.527fa59b.css",
+    "static/js/main.01ed7228.js"
+  ]
+}
